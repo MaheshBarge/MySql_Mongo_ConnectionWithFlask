@@ -7,12 +7,12 @@ import pymongo
 connection = pymysql.connect(host='localhost',
                              user='<username>',
                              password='<password>',
-                             database='hr_sample',
+                             database='<Database_Name>',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
 
 #for mongo conections
-client = pymongo.MongoClient("mongodb+srv://<username>:<password>@cluster0.rf9ij.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = pymongo.MongoClient("<mongoDBConnectionString>")
 db = client.NanotubeDB
 
 app = Flask(__name__)
