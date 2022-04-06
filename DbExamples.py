@@ -28,13 +28,11 @@ def getDataUsingSql():
         result = str(result)
     return result
 
-
 @app.route("/getdataUsingMongoDb",methods=["GET"])
 def getdataUsingMongoDb():
     coll  = db.carbon
     data = {"result": str(list(coll.find().limit(100)))}
     return data
-
 
 if __name__ == "__main__":
     app.run()
